@@ -1,0 +1,29 @@
+
+<%= stylesheet_link_tag 'gmaps4rails' %>
+<%= gmaps4rails(@json).html_safe %>
+<%= yield :scripts %>
+
+
+<%= form_for @home, :url => "insert_user" do |f| %>
+  
+  <%= f.label :country, 'country' %>:
+  <%= f.text_field :country %><br />
+
+  <%= f.label :city, 'city' %>:
+  <%= f.text_field :city %><br />
+
+  <%= f.label :street, 'street' %>:
+  <%= f.text_field :street %><br />
+
+  <%= f.label :latitude, 'latitude' %>:
+  <%= f.text_field :latitude %><br />
+
+  <%= f.label :longitude, 'longitude' %>:
+  <%= f.text_field :longitude %><br />
+  
+
+   <%= f.submit%>
+
+<% end %>
+
+

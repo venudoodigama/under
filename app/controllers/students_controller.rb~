@@ -1,0 +1,10 @@
+class StudentsController < ApplicationController
+  
+  def after_sign_in?
+  if @user.save
+      flash[:notice] = "User created sucessfully"
+else
+      flash[:error] = "User created sucessfully"
+
+      redirect_to :action => :students_index_path
+end
